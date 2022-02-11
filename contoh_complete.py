@@ -56,6 +56,7 @@ def get_all_item(keywords, pages):
         '_trksid': 'p2334524.m570.l1313',
         '_nkw': keywords,
         '_sacat': '0',
+        '_pgn': pages,
 
     }
     r = requests.get(url, params=params, headers=headers)
@@ -94,6 +95,7 @@ def main(keywords):  # <-  digunakan untuk menggabungkan fungsi2 yang telah dibu
     total_pages = get_total_page(keywords) # <- total halaman yang diambil dari fungsi get total pages
     for page in range(total_pages):
         page += 1
+        print(f'Scraping halaman ke: {page}')
         products = get_all_item(keywords, page)
         final_result += products
 
@@ -112,4 +114,4 @@ def main(keywords):  # <-  digunakan untuk menggabungkan fungsi2 yang telah dibu
 
 if __name__=='__main__':
     keyword = 'iphone' # < bisa diganti input
-    main(keyword) 
+    main(keyword)
