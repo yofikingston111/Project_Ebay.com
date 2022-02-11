@@ -94,6 +94,7 @@ def main(keywords):  # <-  digunakan untuk menggabungkan fungsi2 yang telah dibu
     total_pages = get_total_page(keywords) # <- total halaman yang diambil dari fungsi get total pages
     for page in range(total_pages):
         page += 1
+        print(f'Scraping halaman ke: {page}')
         products = get_all_item(keywords, page)
         final_result += products
 
@@ -112,4 +113,4 @@ def main(keywords):  # <-  digunakan untuk menggabungkan fungsi2 yang telah dibu
 
 if __name__=='__main__':
     keyword = 'iphone' # < bisa diganti input
-    main(keyword) 
+    main(keyword)
