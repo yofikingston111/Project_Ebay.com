@@ -103,7 +103,7 @@ def main(keywords):  # <-  digunakan untuk menggabungkan fungsi2 yang telah dibu
     # proses data disini (proses final result)
 
     total_data = len(final_result)
-    print('Total data yang di Scrape: '.format(total_data))
+    print('Ini adalah total halaman yang sudah di scrape '.format(total_data))
 
     # generate csv menggunakan fungsi output (diluar looping)
     output(keywords, final_result)
